@@ -21,3 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/logout','HomeController@Logout')->name('user.logout');
+
+//Admin
+Route::get('admin/home','AdminController@index');
+Route::get('admin','Admin\LoginController@showlogin')->name('admin.login');
+Route::post('admin','Admin\LoginController@login');
